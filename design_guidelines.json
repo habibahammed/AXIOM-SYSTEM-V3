@@ -1,0 +1,197 @@
+{
+  "theme_details": {
+    "name": "AXIOM - MONARCH SYSTEM",
+    "type": "hybrid_fullstack",
+    "emotional_response": [
+      "POWER",
+      "MYSTERY",
+      "FOCUS",
+      "PROGRESSION",
+      "DISCIPLINE",
+      "DISCOVERY",
+      "PRESTIGE",
+      "CONTROL"
+    ],
+    "first_impression": "THIS IS NOT A NORMAL PRODUCTIVITY APP. Cinematic game HUD, premium 3D command center, holographic OS.",
+    "theme_mode": "dark"
+  },
+  "colors": {
+    "backgrounds": {
+      "void": "#000000",
+      "obsidian": "#050505",
+      "matte_carbon": "#121212",
+      "panel_glass": "rgba(0, 0, 0, 0.6)",
+      "panel_glass_hover": "rgba(0, 240, 255, 0.05)"
+    },
+    "accents": {
+      "cyan_primary": "#00F0FF",
+      "cyan_glow": "rgba(0, 240, 255, 0.4)",
+      "amber_warning_xp": "#FFB000",
+      "amber_glow": "rgba(255, 176, 0, 0.4)",
+      "crimson_alert_boss": "#FF2A2A",
+      "crimson_glow": "rgba(255, 42, 42, 0.4)"
+    },
+    "text": {
+      "ice_white": "#EAEAEA",
+      "muted_silver": "#8A8A93",
+      "cyan_tint": "#A8F8FF",
+      "crimson_tint": "#FFB8B8"
+    },
+    "borders": {
+      "subtle_cyan": "rgba(0, 240, 255, 0.2)",
+      "subtle_red": "rgba(255, 42, 42, 0.2)",
+      "grid_lines": "rgba(255, 255, 255, 0.05)"
+    }
+  },
+  "typography": {
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Michroma&family=Rajdhani:wght@400;500;600;700&display=swap"
+    ],
+    "font_families": {
+      "display": "'Michroma', sans-serif",
+      "heading": "'Rajdhani', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "usage": {
+      "h1_rank_boss": {
+        "font": "display",
+        "weight": "400",
+        "tracking": "tracking-widest",
+        "transform": "uppercase",
+        "description": "Used for massive impact: Player Rank (SSS), Boss Names, Level up overlays."
+      },
+      "headings_ui": {
+        "font": "heading",
+        "weight": "600",
+        "tracking": "tracking-wide",
+        "transform": "uppercase",
+        "description": "Used for standard section titles, panel headers, and primary UI navigation."
+      },
+      "body_stats_logs": {
+        "font": "mono",
+        "weight": "400",
+        "tracking": "tracking-tight",
+        "transform": "none",
+        "description": "Used for all system data, stats (STR, AGI), XP numbers, system logs, and dense text."
+      }
+    }
+  },
+  "css_variables": {
+    ":root": {
+      "--background": "0 0% 2%",
+      "--foreground": "0 0% 92%",
+      "--card": "240 5% 7%",
+      "--card-foreground": "0 0% 92%",
+      "--popover": "240 5% 7%",
+      "--popover-foreground": "0 0% 92%",
+      "--primary": "184 100% 50%",
+      "--primary-foreground": "0 0% 5%",
+      "--secondary": "240 5% 15%",
+      "--secondary-foreground": "0 0% 92%",
+      "--muted": "240 4% 16%",
+      "--muted-foreground": "240 5% 65%",
+      "--accent": "41 100% 50%",
+      "--accent-foreground": "0 0% 5%",
+      "--destructive": "0 100% 58%",
+      "--destructive-foreground": "0 0% 98%",
+      "--border": "184 100% 50% / 0.2",
+      "--input": "240 5% 15%",
+      "--ring": "184 100% 50%",
+      "--radius": "0rem"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Tactical Minimalism and HUD Precision. High density grids for command center, generous spacing for cinematic moments.",
+    "container_styles": "Use strict grid alignments. Top-level frames should have thin glowing borders with corner brackets.",
+    "glassmorphism": "bg-black/60 backdrop-blur-xl border border-primary/20",
+    "corner_treatments": "Avoid soft rounded corners. Use sharp edges or CSS clip-path (clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)) for a tech/gaming aesthetic."
+  },
+  "components": {
+    "hud_panels": {
+      "appearance": "Translucent dark plates suspended over a grid void.",
+      "styles": "bg-[#121212]/80 backdrop-blur-md border border-[#00F0FF]/20 relative",
+      "enhancements": "Add L-shaped SVG corner brackets at top-left and bottom-right to simulate a targeting reticle frame. Use 1px inner box-shadow for depth."
+    },
+    "quest_cards": {
+      "appearance": "Holographic mission brief.",
+      "styles": "bg-black/40 border-l-2 border-l-[#00F0FF] border-t border-r border-b border-[#00F0FF]/10 p-4 transition-all duration-300",
+      "hover_state": "hover:bg-[#00F0FF]/10 hover:border-[#00F0FF]/50 hover:shadow-[inset_0_0_15px_rgba(0,240,255,0.2)] hover:-translate-y-1",
+      "completion_flow": "When clicked to complete, flash white, emit cyan glow, then dissolve or shrink."
+    },
+    "boss_cards": {
+      "appearance": "Massive, menacing threat targets (e.g., THE PROCRASTINATOR).",
+      "styles": "bg-gradient-to-t from-[#FF2A2A]/20 to-black/80 border border-[#FF2A2A]/30 p-6 relative overflow-hidden",
+      "enhancements": "Include abstract red warning scanlines. Text should glow crimson."
+    },
+    "xp_bars": {
+      "appearance": "Segmented tactical gauge.",
+      "styles": "h-2 bg-[#121212] flex gap-1",
+      "fill": "bg-[#FFB000] shadow-[0_0_10px_#FFB000]",
+      "structure": "Instead of a single continuous bar, break it into 10-20 small segments for a mechanical instrument feel."
+    },
+    "rank_emblems": {
+      "appearance": "Holographic geometric badge.",
+      "styles": "text-[#00F0FF] font-michroma text-4xl text-shadow-[0_0_15px_#00F0FF] border border-[#00F0FF]/40 rotate-45 p-4 flex items-center justify-center"
+    },
+    "cinematic_overlays": {
+      "appearance": "Full screen event interruptions (Rank up, Boss Detected).",
+      "styles": "fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center pointer-events-none",
+      "animation": "Flash white -> Reveal massive Michroma text -> Scanline glitch -> Fade out."
+    }
+  },
+  "motion": {
+    "ambient": "Slow, purposeful motion. A rotating SVG reticle (20s duration), a pulsing status dot (pulse opacity 50% to 100%), or a slow scanning line moving down the panel.",
+    "interactions": "Crisp and immediate. No 'springy' bounces. Use ease-out for 150-200ms.",
+    "cinematic_events": "Scale-in from 0.8 to 1.0 with intense glow blooms and slight chromatic aberration (via text-shadow offsets)."
+  },
+  "3d_and_creative": {
+    "library": "React Three Fiber (R3F) + Drei",
+    "usage_context": "Command Center background and AXIOM Architect AI representation.",
+    "scene_setup": "Render a dark void with floating geometric nodes or a central 'Core' sphere. Use an InstancedMesh for background star/data-particle fields.",
+    "material": "Holographic material with fresnel glow and scanlines. Primary mesh color: #00F0FF, Background color: transparent/black.",
+    "performance": "Keep geometry simple (Icosahedron or Sphere). Avoid heavy textures. Use post-processing (Bloom) sparingly to maintain 60FPS."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use stroke-width 1.5 for a sharp, technical appearance. No filled icons. Pair with cyan or silver colors.",
+    "forbidden": "Do NOT use emoji icons under any circumstances. Everything must feel like a precision instrument."
+  },
+  "accessibility": {
+    "contrast": "Ensure JetBrains Mono data points have at least 4.5:1 against the dark background.",
+    "reduced_motion": "Provide a strict toggle for users. Wrap ambient R3F rotation and CSS pulses in a prefers-reduced-motion check.",
+    "test_ids": "CRITICAL: All interactive elements, buttons, and stat values MUST include data-testid. E.g., data-testid='quest-complete-button', data-testid='player-str-stat'."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1684610529682-553625a1ffed",
+      "description": "Abstract holographic lines on a sphere. Use as a fallback for the 3D Architect core if R3F fails or as a hero background element.",
+      "category": "3d_fallback"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1624139283078-74a0492f2ee3",
+      "description": "Dark abstract waves. Can be used with opacity 5% as a background texture for Boss cards.",
+      "category": "texture"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Initialize React app with Tailwind, Shadcn, Lucide-react, React Three Fiber (@react-three/fiber @react-three/drei), and Framer Motion.",
+    "Do NOT use Vercel/Stripe 'soft SaaS' aesthetics. Implement sharp cuts, glassmorphism, and neon glows.",
+    "Create a layout shell `AxiomShell` containing the top/side navigation and the 3D R3F Canvas strictly in the background.",
+    "Implement the 6 deep screens required: Command Center, Daily Operations, Quest Board, Player Evolution, Boss Archive, AXIOM Architect AI.",
+    "In Command Center, ensure the Player HUD uses absolute or fixed positioning overlaying the 3D scene.",
+    "Fonts MUST be imported in the HTML/CSS entry point.",
+    "Quest complete and Level Up actions must trigger a centralized overlay component that handles the cinematic flash and text reveal.",
+    "Ensure the AXIOM Architect AI chat uses the JetBrains Mono font for responses to feel like terminal readouts."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Do not converge toward generic outputs. AXIOM is a high-end sci-fi OS.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "MUST NOT apply universal transition (transition: all).",
+    "MUST NOT center align the app container. Text alignment should be left-aligned for data readability unless specifically framing a cinematic title.",
+    "Always use sharp-edged or cut-corner buttons with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters.",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations. Static = dead.",
+    "Always include data-testid attributes for testing."
+  ]
+}
